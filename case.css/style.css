@@ -1,9 +1,10 @@
 #frame{
-    background-color:#7ed6df;
+    background-image: linear-gradient(to bottom right, #c5cf66, #54e2b3);
     width: 500px;
     height:500px;
     margin:0 auto;
     border: 1px solid black;
+    font-family: "Nunito Sans", sans-serif;
    }
    #errorText{
     font-size: 20px;
@@ -20,7 +21,7 @@
     vertical-align: middle;
     padding: 10px 15px;
    }
-   #email,#mk,#tendn,#nghenghiep,#tuoi,#btnDangnhap {
+   #email,#mk,#tendn,#phone,#address,#btnDangnhap {
     height: 25px;
     width: 230px;
     font-size: small;

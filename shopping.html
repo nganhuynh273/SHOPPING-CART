@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="case.css/shop.css">
+</head>
+<body>
+        <header class="container">
+            <h1 style="color:rgb(5, 5, 5)"> Giỏ hàng </h1>
+
+            <ul class="breadcrumb">
+                <li>Trang chủ</li>
+                <li>Giỏ hàng</li>
+            </ul>
+            
+            <span class="count">Có 3 mặt hàng</span>
+        </header>
+
+        <section class="container">
+            <ul class="products">
+                <li class="row">
+                    <div class="col left">
+                        <div class="thumbnail">
+                            <a href="#">
+                                <img src="https://via.placeholder.com/200x150" alt="" />
+                            </a>
+                        </div>
+                        <div class="detail">
+                            <div class="name"><a href="#">Mục sản phẩm số 1</a></div>
+                            <div class="description">
+                                Mô tả cho mục sản phẩm số 1
+                            </div>
+                            <div class="price">320.000 VNĐ</div>
+                        </div>
+                    </div>
+
+                    <div class="col right">
+                        <div class="quantity">
+                            <input type="number" class="quantity" step="1" value="2" />
+                        </div>
+
+                        <div class="remove">
+                            <span class="close"><i class="fa fa-times" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="row">
+                    <div class="col left">
+                        <div class="thumbnail">
+                            <a href="#">
+                                <img src="https://via.placeholder.com/200x150" alt="" />
+                            </a>
+                        </div>
+                        <div class="detail">
+                            <div class="name"><a href="#">Mục sản phẩm số 2</a></div>
+                            <div class="description">
+                                Mô tả cho mục sản phẩm số 2
+                            </div>
+                            <div class="price">175.000 VNĐ</div>
+                        </div>
+                    </div>
+
+                    <div class="col right">
+                        <div class="quantity">
+                            <input type="number" class="quantity" step="1" value="1" autocomplete="off" />
+                        </div>
+
+                        <div class="remove">
+                            <span class="close"><i class="fa fa-times" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col left">
+                        <div class="thumbnail">
+                            <a href="#">
+                                <img src="https://via.placeholder.com/200x150" alt="" />
+                            </a>
+                        </div>
+                        <div class="detail">
+                            <div class="name"><a href="#">Mục sản phẩm số 3</a></div>
+                            <div class="description">
+                                Mô tả cho mục sản phẩm số 3
+                            </div>
+                            <div class="price">350.000 VNĐ</div>
+                        </div>
+                    </div>
+
+                    <div class="col right">
+                        <div class="quantity">
+                            <input type="number" class="quantity" step="1" value="2" />
+                        </div>
+
+                        <div class="remove">
+                            <span class="close"><i class="fa fa-times" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="option-container container">
+
+            <div class="promotion">
+                <label for="promo-code">Nhập mã khuyến mãi</label>
+                <input type="text" id="promo-code" autocomplete="off" />
+                <button type="button"></button>
+            </div>
+
+        
+            <div class="summary">
+                <ul>
+                    <li class="subtotal">Tổng tiền hàng: <span>1.165.000 VNĐ</span></li>
+                    <li class="vat">VAT: <span>100.000 VNĐ</span></li>
+                    <li class="discount hide">Giảm giá: <span></span></li>
+                    <li class="total">Tổng thanh toán: <span></span></li>
+                </ul>
+            </div>
+        </section>
+
+</body>
+
+<script src="./form1.js">
+let params = new URLSearchParams(location.search);
+let dn = params.get('dn') ;
+console.log(dn);
+
+</script>
+</html>

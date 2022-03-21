@@ -12,7 +12,7 @@
 <body>
     <div id="frame">
 
-        <form id='form' action="">
+        <form id='form' action="shopping.html">
             <h1 align='center' style="color:rgb(5, 5, 5)">ĐĂNG KÝ THÀNH VIÊN</h1>
             <div align='center' id='errorText'></div>
             <table align='center' cellspacing="0px" cellpadding="20px" border="0">
@@ -20,7 +20,7 @@
                     <td class='labeltext'>Tên đăng nhập:</td>
                     <td>
                         <input id='tendn' type="text" value='' name="dn" placeholder="Nhập tên đăng nhập"
-                            onblur="this.placeholder='Nhập tên đăng hhập'"
+                            onblur="this.placeholder='Nhập tên đăng nhập'"
                             onfocus="this.placeholder='Nhập tên đăng nhập'">
                     </td>
                 </tr>
@@ -34,32 +34,30 @@
                 <tr>
                     <td class='labeltext'>Email:</td>
                     <td>
-                        <input id='email' type="email" value='' name="email" placeholder="Nhập tên đăng nhập"
-                            onblur="this.placeholder='Nhập tên đăng hhập'"
-                            onfocus="this.placeholder='Nhập tên đăng nhập'">
+                        <input id='email' type="email" value='' name="email" placeholder="Nhập tên email"
+                            onblur="this.placeholder='Nhập tên email'"
+                            onfocus="this.placeholder='Nhập tên email'" required>
                     </td>
                 </tr>
                 <tr>
-                    <td class='labeltext'>Nghề nghiệp:</td>
+                    <td class='labeltext'>Số điện thoại:</td>
                     <td>
-                        <select id='nghenghiep'>
-                            <option id='id1' value="1">Chọn nghề</option>
-                            <option value="2">Học sinh - Sinh viên</option>
-                            <option value="3">Văn phòng</option>
-                            <option value="4">Tự do</option>
-                        </select>
+                        <input id='phone' type="phone" value='' name="phone" placeholder="Nhập số điện thoại"
+                            onblur="this.placeholder='Nhập số điện thoại'"
+                            onfocus="this.placeholder='Nhập số điện thoại'"required>
                     </td>
                 </tr>
                 <tr>
-                    <td class='labeltext'>Tuổi:</td>
+                    <td class='labeltext'>Địa chỉ:</td>
                     <td>
-                        <input id='tuoi' type="text" value='' name="tuoi" placeholder="Nhập tuổi"
-                            onblur="this.placeholder='Nhập tuổi'" onfocus="this.placeholder='Nhập tuổi'">
+                        <input id='address' type="address" value='' name="address" placeholder="Nhập địa chỉ"
+                            onblur="this.placeholder='Nhập đia chỉ'"
+                            onfocus="this.placeholder='Nhập địa chỉ'">
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <button class='btnDangnhap' onclick="dangnhap()">Đăng nhập
+                        <button type="submit" class='btnDangnhap' onclick="dangnhap()" >Đăng nhập 
                             </button>
                     </td>
                 </tr>
