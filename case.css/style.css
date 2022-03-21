@@ -1,0 +1,34 @@
+#frame{
+    background-color:#7ed6df;
+    width: 500px;
+    height:500px;
+    margin:0 auto;
+    border: 1px solid black;
+   }
+   #errorText{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+   }
+   .btnDangnhap{
+    margin-left: 150px;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+    vertical-align: middle;
+    padding: 10px 15px;
+   }
+   #email,#mk,#tendn,#nghenghiep,#tuoi,#btnDangnhap {
+    height: 25px;
+    width: 230px;
+    font-size: small;
+   }
+table>tbody>tr>td {
+    font-size: large;
+}
+   .labeltext{
+       color: black;
+   }
+   
