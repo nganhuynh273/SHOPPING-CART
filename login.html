@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <div id="framee">
+
+        <form id='formLogin' action="/shopping.html">
+            <!-- <h1 align='center' style="color:rgb(5, 5, 5)"> ĐĂNG NHẬP </h1> -->
+            <div align='center' id='errorText'></div>
+            <table align='center' cellspacing="0px" cellpadding="20px" border="0">
+                <tr>
+                    <td class='labeltext'>Email:</td>
+                    <td>
+                        <input id='email' type="text" value='' name="dn" placeholder="Nhập email đăng nhập" required
+                            onblur="this.placeholder='Nhập email đăng nhập'"
+                            onfocus="this.placeholder='Nhập email đăng nhập'">
+                    </td>
+                </tr>
+                <tr>
+                    <td class='labeltext'>Mật khẩu:</td>
+                    <td>
+                        <input id='mk' type="password" value='' name="mk" placeholder="Nhập mật khẩu" required
+                            onblur="this.placeholder='Nhập mật khẩu'" onfocus="this.placeholder='Nhập mật khẩu'">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" onclick="login()" class="nbtnDangnhap"> Đăng nhập </button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+<script src="./js/user.js"></script>
+<script src="./js/dk.js"></script>
+
+<script>
+    form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        } else {
+            login();
+        }
+    }, false);
+
+    function login() {
+
+        let emailLogin = document.querySelector("#email").value;
+        let passwordLogin = document.querySelector("#mk").value;
+
+        if (emailLogin == "" || passwordLogin == "") {
+            alert("Thông tin đăng nhập không hợp lệ");
+        } else {
+            let isExist = false;
+            //get users len tu localStorage
+            //lap users kieem tra 
+            // user.mail && user.passs  == 2 input
+            let users = getLocalStorage();
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].mail == emailLogin) {
+                    if (users[i].pass == passwordLogin) {
+                        isExist = true;
+                        break;
+                    }
+                }
+
+            }
+            if (!isExist) {
+                alert("Thông tin đăng nhập không hợp lệ");
+            } else {
+                document.getElementById("formLogin").submit();
+            }
+
+        }
+
+
+    }
+</script>
+
+</html>
