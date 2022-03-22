@@ -55,35 +55,31 @@
     }, false);
 
     function login() {
-
         let emailLogin = document.querySelector("#email").value;
         let passwordLogin = document.querySelector("#mk").value;
+        // hiển thị danh sách đã đăng ký
+        let listUser = JSON.parse(localStorage.getItem('userListKey'))
 
-        if (emailLogin == "" || passwordLogin == "") {
+        if (listUser == null) {
             alert("Thông tin đăng nhập không hợp lệ");
         } else {
-            let isExist = false;
-            //get users len tu localStorage
-            //lap users kieem tra 
-            // user.mail && user.passs  == 2 input
-            let users = getLocalStorage();
-            for (let i = 0; i < users.length; i++) {
-                if (users[i].mail == emailLogin) {
-                    if (users[i].pass == passwordLogin) {
-                        isExist = true;
-                        break;
-                    }
-                }
-
+            // lọc lại user trong danh sách listuser có mail và pass hợp lệ
+            let currentUser = listUser.filter(e => e.mail == emailLogin && e.pass == passwordLogin)
+            // khởi tạo trạng thái đăng nhập ban đầu
+            let userLogin = {
+                mail: '',
+                isLogin: false
             }
-            if (!isExist) {
-                alert("Thông tin đăng nhập không hợp lệ");
-            } else {
+
+            if (currentUser.length > 0) {
+                userLogin.mail = currentUser[0].mail
+                userLogin.isLogin = true
+                localStorage.setItem('userLogin', JSON.stringify(userLogin))
                 document.getElementById("formLogin").submit();
+            } else {
+                alert("Thông tin đăng nhập không hợp lệ");
             }
-
         }
-
 
     }
 </script>

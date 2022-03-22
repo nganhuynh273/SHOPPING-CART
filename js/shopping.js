@@ -184,4 +184,15 @@ btnPromotion.addEventListener('click', function () {
     updateTotalMoney(products);
 });
 
-window.onload = renderUI(products);
+window.onload = function(){
+    let isLogin = JSON.parse(localStorage.getItem('userLogin'));
+
+    if (isLogin == undefined) {
+        window.location.href = 'login.html'
+    } else if (isLogin.isLogin) {
+        window.onload = renderUI(products); 
+    } else {
+        window.location.href = 'login.html'
+    }
+
+}
