@@ -107,15 +107,15 @@ function renderUI(arr) {
                     </div>
                     <div class="remove">
                         <span class="close" onclick="removeItem(${p.id})">
-                            <i class="fa fa-times" aria-hidden="true"></i>
+                        <i id="remove" title="Remove" class="fa fa-trash danger" onclick="removeItem(${p.id})"></i>
                         </span>
                     </div>
+                   
                 </div>
             </li>
         `;
     }
 }
-
 
 function updateTotalItem(arr) {
     let total = 0;
@@ -127,6 +127,7 @@ function updateTotalItem(arr) {
 }
 
 function removeItem(id) {
+    let confirmed = window.confirm("Bạn chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng?");
     for (let i = 0; i < products.length; i++) {
         if (products[i].id == id) {
             products.splice(i, 1);

@@ -325,3 +325,34 @@ header .count {
 		font-size: 16px;
 	}
 }
+.danger{
+    color:#dc3545
+	
+}
+#remove {
+	font-size: 20px;
+}
+.amountProduct {
+    width: 35px;
+    text-align: center;
+    height: 28px;
+    border: 1px solid #E6E6E6;
+    outline: none;
+}
+.quantity-change {
+    height: 28px;
+    width: 28px;
+    border: 1px solid #E6E6E6;
+}
+#amountProduct {
+    display: flex;
+    margin-left: 65px;
+}
+.btn-change {
+    outline: none;
+    border: none;
+    font-size: 20px;
+    background-color: #FFFFFF;
+    width: 28px;
+    height: 28px;
+}
