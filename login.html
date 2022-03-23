@@ -79,7 +79,8 @@
                 userLogin.mail = currentUser[0].mail
                 userLogin.isLogin = true
                 localStorage.setItem('userLogin', JSON.stringify(userLogin))
-                document.getElementById("formLogin").submit();
+                // document.getElementById("formLogin").submit();
+                window.location="shopping.html"
             } else {
                 alert("Thông tin đăng nhập không hợp lệ");
             }
