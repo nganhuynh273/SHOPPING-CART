@@ -45,8 +45,9 @@
 <script src="./js/dk.js"></script>
 
 <script>
-    form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
+    let loginButton = document.querySelector(".nbtnDangnhap");
+    loginButton.addEventListener('submit', function (event) {
+        if (!loginButton.checkValidity()) {
             event.preventDefault()
             event.stopPropagation()
         } else {
