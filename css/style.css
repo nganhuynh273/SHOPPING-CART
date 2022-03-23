@@ -1,3 +1,4 @@
+
 #frame{
     background-image: linear-gradient(to bottom right, #c5cf66, #54e2b3);
     width: 500px;
@@ -22,6 +23,8 @@
     cursor: pointer;
     vertical-align: center;
     padding: 10px 15px;
+    /* height: 35px;
+    width: 100px; */
    }
    .btnDangnhap{
     font-size: 15px;
@@ -34,6 +37,12 @@
     cursor: pointer;
     vertical-align: center;
     padding: 10px 15px;
+    height: 45px;
+   }
+   .a1{
+       height: 41px;
+       width: 104px;
+       background-color: #007bff;
    }
    .nbtnDangnhap{
     font-size: 15px;

@@ -103,6 +103,8 @@ function renderUI(arr) {
                             step="1" 
                             value="${p.count}" 
                             onchange="changeTotalProduct(${p.id}, event)"
+                            oninput="this.value =
+                            !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null" 
                         >
                     </div>
                     <div class="remove">
