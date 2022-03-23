@@ -99,7 +99,7 @@
             <td colspan="2">
               <!-- <a class="btnDangky" href="login.html">Đăng ký </a> -->
               <button type="submit" class="btnDangky"> Đăng ký </button> 
-              <a href="login.html" class="btnDangnhap">Đăng nhập</a>
+              <button onclick="Redirect()" class="btnDangnhap">Đăng nhập</button>
               <!-- <button type="submit" class='btnDangnhap' onclick="dangnhap()" >Đăng nhập </button> -->
             </td>
           </tr>
@@ -109,7 +109,9 @@
   </body>
   <script src="./js/user.js"></script>
   <script>
-    
+    function Redirect() {
+               window.location="login.html";
+            }
   </script>
   <script src="./js/dk.js"></script>
 </html>
