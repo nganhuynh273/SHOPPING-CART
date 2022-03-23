@@ -56,9 +56,9 @@ function getLocalStorage() {
   else
     return [];
 }
-
-form.addEventListener('submit', function (event) {
-  if (!form.checkValidity()) {
+let signUp = document.querySelector(".btnDangky");
+signUp.addEventListener('submit', function (event) {
+  if (!signUp.checkValidity()) {
     event.preventDefault()
     event.stopPropagation()
   } else {
