@@ -61,7 +61,7 @@ let inputPromotion = document.querySelector('#promo-code');
 function renderUI(arr) {
     productsEle.innerHTML = '';
 
-    
+
     let countEle = document.querySelector('.count');
     countEle.innerText = `Có ${updateTotalItem(arr)} mặt hàng`;
 
@@ -108,7 +108,7 @@ function renderUI(arr) {
                         >
                     </div>
                     <div class="remove">
-                        <span class="close" onclick="removeItem(${p.id})">
+                     
                         <i id="remove" title="Remove" class="fa fa-trash danger" onclick="removeItem(${p.id})"></i>
                         </span>
                     </div>
@@ -127,17 +127,17 @@ function updateTotalItem(arr) {
     }
     return total;
 }
-
 function removeItem(id) {
     let confirmed = window.confirm("Bạn chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng?");
-    for (let i = 0; i < products.length; i++) {
-        if (products[i].id == id) {
-            products.splice(i, 1);
+    if (confirmed) {
+        for (let i = 0; i < products.length; i++) {
+            if (products[i].id == id) {
+                products.splice(i, 1);
+            }
         }
+        renderUI(products);
     }
-    renderUI(products);
 }
-
 function changeTotalProduct(id, e) {
     for (let i = 0; i < products.length; i++) {
         if (products[i].id == id) {
@@ -148,7 +148,7 @@ function changeTotalProduct(id, e) {
 }
 
 function updateTotalMoney(arr) {
-   
+
     let totalMoney = 0;
     let discountMoney = 0;
 
@@ -157,7 +157,7 @@ function updateTotalMoney(arr) {
         totalMoney += p.count * p.price;
     }
 
-    
+
     let data = checkPromotion();
 
     if (data) {
@@ -167,7 +167,7 @@ function updateTotalMoney(arr) {
         discount.classList.add('hide');
     }
 
-    
+
     subTotalEl.innerText = convertMoney(totalMoney);
     vatEl.innerText = convertMoney(totalMoney * 0.05);
     discountEle.innerText = convertMoney(discountMoney);
@@ -187,13 +187,13 @@ btnPromotion.addEventListener('click', function () {
     updateTotalMoney(products);
 });
 
-window.onload = function(){
+window.onload = function () {
     let isLogin = JSON.parse(localStorage.getItem('userLogin'));
 
     if (isLogin == undefined) {
         window.location.href = 'login.html'
     } else if (isLogin.isLogin) {
-        window.onload = renderUI(products); 
+        window.onload = renderUI(products);
     } else {
         window.location.href = 'login.html'
     }
