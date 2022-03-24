@@ -69,4 +69,3 @@ form.addEventListener('submit', function (event) {
     }
   }
 }, false)
-alert ('Bạn đã đăng ký tài khoản thành công')
