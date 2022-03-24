@@ -1,6 +1,6 @@
 
 #frame{
-    background-image: linear-gradient(to bottom right, #c5cf66, #54e2b3);
+    background-image: linear-gradient(to bottom right, #4bcffa, #d2dae2);
     width: 500px;
     height:550px;
     margin:0 auto;
@@ -67,7 +67,7 @@ table>tbody>tr>td {
    }
    
    #framee{
-    background-image: linear-gradient(to bottom right, #c5cf66, #54e2b3);
+    background-image: linear-gradient(to bottom right, #4bcffa, #d2dae2);
     width: 500px;
     height:250px;
     margin:0 auto;
