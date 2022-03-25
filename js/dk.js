@@ -57,15 +57,20 @@ function getLocalStorage() {
     return [];
 }
 
-// let form = document.querySelector(".btnDangky");
-form.addEventListener('submit', function (event) {
-  if (!form.checkValidity()) {
-    event.preventDefault()
-    event.stopPropagation()
-  } else {
-    if (!dangky()) {
+let form = document.querySelector(".btnDangky");
+
+if(form!=null){
+  form.addEventListener('submit', function (event) {
+    if (!form.checkValidity()) {
       event.preventDefault()
       event.stopPropagation()
+    } else {
+      if (!dangky()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
     }
-  }
-}, false)
+  }, false)
+
+}
+
