@@ -189,7 +189,7 @@ btnPromotion.addEventListener('click', function () {
 
 window.onload = function () {
     let isLogin = JSON.parse(localStorage.getItem('userLogin'));
-    console.log(isLogin);
+    // console.log(isLogin);
 
     if (isLogin == undefined) {
         window.location.href = 'login.html'

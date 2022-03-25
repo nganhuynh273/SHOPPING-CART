@@ -57,9 +57,9 @@ function getLocalStorage() {
     return [];
 }
 
-let form = document.querySelector(".btnDangky");
+// let form = document.querySelector(".btnDangky");
 
-if(form!=null){
+// if(form!=null){
   form.addEventListener('submit', function (event) {
     if (!form.checkValidity()) {
       event.preventDefault()
@@ -72,5 +72,5 @@ if(form!=null){
     }
   }, false)
 
-}
+// }
 
